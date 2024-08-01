@@ -52,22 +52,22 @@ def crawl(startPAGE, endPAGE):
 
 if __name__ == '__main__':
     lock = threading.Lock()
-    thread1 = threading.Thread(target=crawl, args=(416, 1250))451 11:43
-    thread2 = threading.Thread(target=crawl, args=(1292, 2500))1316
-    thread3 = threading.Thread(target=crawl, args=(2720, 3750))2734
-    thread4 = threading.Thread(target=crawl, args=(3784, 5000))3798
-    thread5 = threading.Thread(target=crawl, args=(5277, 6250))5304
-    thread6 = threading.Thread(target=crawl, args=(6308, 7500))6342
-    thread7 = threading.Thread(target=crawl, args=(7821, 8750))7864
-    thread8 = threading.Thread(target=crawl, args=(8820, 10000))8855
-    thread9 = threading.Thread(target=crawl, args=(10183, 11250))10202
-    thread10 = threading.Thread(target=crawl, args=(11263, 12500))11284
-    thread11 = threading.Thread(target=crawl, args=(12712, 13750))12734
-    thread12 = threading.Thread(target=crawl, args=(13822, 15000))13845
-    thread13 = threading.Thread(target=crawl, args=(15340, 16250))15369
-    thread14 = threading.Thread(target=crawl, args=(16331, 17500))16394
-    thread15 = threading.Thread(target=crawl, args=(17663, 18750))17689
-    thread16 = threading.Thread(target=crawl, args=(18795, 20000))18827
+    thread1 = threading.Thread(target=crawl, args=(416, 1250))
+    thread2 = threading.Thread(target=crawl, args=(1292, 2500))
+    thread3 = threading.Thread(target=crawl, args=(2720, 3750))
+    thread4 = threading.Thread(target=crawl, args=(3784, 5000))
+    thread5 = threading.Thread(target=crawl, args=(5277, 6250))
+    thread6 = threading.Thread(target=crawl, args=(6308, 7500))
+    thread7 = threading.Thread(target=crawl, args=(7821, 8750))
+    thread8 = threading.Thread(target=crawl, args=(8820, 10000))
+    thread9 = threading.Thread(target=crawl, args=(10183, 11250))
+    thread10 = threading.Thread(target=crawl, args=(11263, 12500))
+    thread11 = threading.Thread(target=crawl, args=(12712, 13750))
+    thread12 = threading.Thread(target=crawl, args=(13822, 15000))
+    thread13 = threading.Thread(target=crawl, args=(15340, 16250))
+    thread14 = threading.Thread(target=crawl, args=(16331, 17500))
+    thread15 = threading.Thread(target=crawl, args=(17663, 18750))
+    thread16 = threading.Thread(target=crawl, args=(18795, 20000))
 
     thread1.start()
     thread2.start()

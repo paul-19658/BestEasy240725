@@ -21,7 +21,7 @@ def filtrate(soup): # 网页中筛选分辨率
         return True
 
 
-for pageNum in range(44,177):
+for pageNum in range(173,177):
     pageUrl1 = f'https://magdeleine.co/page/{pageNum}'
     pageResp1 = requests.get(pageUrl1)
     print('下面执行：', pageUrl1)

@@ -1,10 +1,10 @@
-# 筛选 短边分辨率>=4096 也可以加一个异常处理，
-# 把坏的图片删掉，一般在手动换文件夹的时候停掉的那一张会有问题
+# 本地筛选 通用
+#
 
 import os
 from PIL import Image
 
-path=r'../imgGot3'
+path=r'F:/爬虫202407/ZC_爬虫_0726/magdeleine_co/imgGot1/'
 
 fileList=os.listdir(path)
 
@@ -26,13 +26,13 @@ for file in fileList:
 
     img.close()
 
-    # # 删除 不符合
-    # if img.width<4096 or img.height<4096:
-    #     os.remove(imgSrc)
-    #     print('图片{}，尺寸为{}，已删除。'.format(imgSrc,imgSize) )
+    # 删除 不符合
+    if img.width<4000 or img.height<4000:
+        os.remove(imgSrc)
+        print('图片{}，尺寸为{}，已删除。'.format(imgSrc,imgSize) )
 
     # 统计
-    if img.width<4096 or img.height<4096:
+    if img.width<4000 or img.height<4000:
         print('图片{}，尺寸为{}，不符合要求。'.format(imgSrc,imgSize) )
         count2=count2+1
     else:
