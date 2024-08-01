@@ -5,7 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # 网站的第三部分 ‘系列’
-# 2024/7/31 自动切换写入目录 100%
+# 2024/7/31 自动切换写入目录 100% 52112_com 90%
+
 # 加个文件夹数量检测
 gl_dirNum: int = 90
 
