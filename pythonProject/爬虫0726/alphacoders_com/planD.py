@@ -3,6 +3,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+# 朴实无华 物理破解
 
 with open('C:/Users/BESTEASY/Desktop/新建文本文档.txt','rb') as f:
     html=f.read()
