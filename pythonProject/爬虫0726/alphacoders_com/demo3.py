@@ -12,7 +12,7 @@ import subprocess
 # 14:53 plan d 手动把图片都加载出来 然后再处理这个html。。。。
 # 8/5 9：54 动态加载的url https://alphacoders.com/resolution/7680x4320?page=8&quickload=1  page就到200 可以一个一个整
 # 还是决定一个一个的先跑着，多线程来跑，然后再慢慢看抓包
-
+# 18：00 又发现可以selenium，要等加载，先拉到底然后一个一个click，这样可以，然后开始的时候sleep修改下载路径
 # 通过cmd启动
 
 # 不自动关闭浏览器
