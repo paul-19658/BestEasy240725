@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 #  0-0-0-0-0-0-0-0-0-0-0-0-0-{pageNum}.html
 for pageNum in range(36,201):
     url = f'https://www.52112.com/list/116054-0-0-0-0-0-0-0-0-0-0-0-0-{pageNum}.html'
+
     response = requests.get(url)
     print('下面执行：',url)
 
