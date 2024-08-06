@@ -6,12 +6,17 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import subprocess
+"""
+8/6 本来以为只能selenium然后一个一个click，通过抓包还是发现了动态加载的url路径也能爬，这是循环url爬取的
+"""
+
 # 8/5 10：55 搞到动态加载的请求了，直接是返回html格式，所以先跑着
 # 11:22 requests会被ban 应该还是浏览器指纹的问题，还是selenium跑
 # 多线程需要对应数量的浏览器多开。。
 # 好像多开不了
 # 13：35 好像是Chrome多开不了，threading不行，我直接运行在不同的py文件里也不行，那一个窗口慢慢跑得了
 # 8/5 17:36 该执行page176
+# 8/6 9:40 执行page184
 # https://alphacoders.com/resolution/7680x4320?page=8&quickload=1  page就到200
 # html/body/div/div/div[n]/div/div[2]/div/div/div/span class='button button-download'
 def runChrome(port):
@@ -23,7 +28,7 @@ def runChrome(port):
 
 def runPage(pageStart,pageEnd,port):
     for pageNum in range(pageStart,pageEnd):
-        url = f'https://alphacoders.com/resolution/7680x4320?page={pageNum}&quickload=1'
+        url = f'https://alphacoders.com/resolution/6000x4000?page={pageNum}&quickload=1'
 
         # 不自动关闭浏览器
         option = webdriver.ChromeOptions()
@@ -60,7 +65,7 @@ def runPage(pageStart,pageEnd,port):
                     imgName = imgSrc.split('/')[-2] + '.jpg'
 
                     lock.acquire()
-                    with open('F:/爬虫202407/ZC_爬虫_0726/alphacoders_com/imgGot0806/' + imgName, mode='wb') as f:  # 这里手动换吧
+                    with open('F:/爬虫202407/ZC_爬虫_0726/alphacoders_com/imgGot0806_1/' + imgName, mode='wb') as f:  # 这里手动换吧
                         f.write(imgResponse.content)
                     lock.release()
                     print(imgName, ':completed,num:', i)
@@ -82,7 +87,7 @@ if __name__ == '__main__':
     # threadChrome3=threading.Thread(target=runChrome(port3))
     # threadChrome4=threading.Thread(target=runChrome(port4))
 
-    thread1=threading.Thread(target=runPage,args=(156,201,port1))
+    thread1=threading.Thread(target=runPage,args=(105,201,port1))
     # thread2=threading.Thread(target=runPage,args=(50,100,port2))
     # thread3=threading.Thread(target=runPage,args=(100,150,port3))
     # thread4=threading.Thread(target=runPage,args=(150,201,port4))
