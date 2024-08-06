@@ -29,20 +29,20 @@ btnCloseDispaly.click()
 print('先关闭一个display')
 time.sleep(1)
 
-btnDownload=driver.find_element(by= By.XPATH, value="//*[@class='button button-download']")
-btnDownload.click()
-print('点击下载')
-time.sleep(1)
-while True:
-    try:
-        btnCloseAd=driver.find_element(by= By.CLASS_NAME, value="ns-g0kc3-e-19 button-common close-button milo-animation delay-4") # 再关闭一个弹出的广告
-        btnCloseAd.click()
-    except:
-        pass
-print('再关闭一个弹出广告')
-
-driver.switch_to.alert.dismiss()
-print(111)
+# btnDownload=driver.find_element(by= By.XPATH, value="//*[@class='button button-download']")
+# btnDownload.click()
+# print('点击下载')
+# time.sleep(1)
+# while True:
+#     try:
+#         btnCloseAd=driver.find_element(by= By.CLASS_NAME, value="ns-g0kc3-e-19 button-common close-button milo-animation delay-4") # 再关闭一个弹出的广告
+#         btnCloseAd.click()
+#     except:
+#         pass
+# print('再关闭一个弹出广告')
+#
+# driver.switch_to.alert.dismiss()
+# print(111)
 # a1=driver.find_element(by= By.XPATH,value="/html/body/div/div/div/main/div/div/div/div/div[1]/figure/a")
 # # print(a1.get_property('href'))
 # path2=a1.get_property('href')
